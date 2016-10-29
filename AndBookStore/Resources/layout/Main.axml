@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:weightSum="100"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#4682B4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:id="@+id/txtSearch"
+            android:hint="Search"
+            android:textColor="#000000" />
+        <Button
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:id="@+id/button1" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#00BFFF"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alwaysDrawnWithCache="true"
+            android:dividerHeight="1dp"
+            android:scrollingCache="true"
+            android:smoothScrollbar="true"
+            android:id="@+id/lvBooksSearch" />
+    </LinearLayout>
+    <TextView
+        android:text=" THE CART"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:id="@+id/txtMiddleText"
+        android:gravity="center" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#00BFFF"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvBooksCart" />
+    </LinearLayout>
+    <EditText
+        android:text="Medium Text"
+        android:textColor="#000000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTotalcost"
+        android:gravity="center" />
+    <Button
+        android:text="Buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2" />
+</LinearLayout>
