@@ -59,7 +59,9 @@ namespace AndBookStore
                 if (status != 0)
                 {
                     totalcost = bookstore.backend.Class.ShopingCart.TotalCost(totalcost, book.Price, status);
-                    temList.Add(book);
+                    IBooksWithInterface temp = new IBooksWithInterface(book.Title,book.Author,book.Price,book.InStock);
+                    temp.NumberOfThisBookIncart = status;
+                    temList.Add(temp);
                 }
                                                                                                                                                                                                                                                                                             
             }
@@ -73,7 +75,9 @@ namespace AndBookStore
                 int status = bookstore.backend.Class.ShopingCart.outofstock(book.InStock, book.NumberOfThisBookIncart);
                 if (status != -1)
                 {
-                    temList2.Add(book);
+                    IBooksWithInterface temp = new IBooksWithInterface(book.Title, book.Author, book.Price, book.InStock);
+                    temp.NumberOfThisBookIncart = status;
+                    temList2.Add(temp);
                 }
                
 

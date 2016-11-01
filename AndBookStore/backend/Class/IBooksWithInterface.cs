@@ -19,7 +19,7 @@ namespace bookstore.backend.Class
         public string Title { get { return title; } }
         public int InStock { get { return inStock; } }
 
-        public int NumberOfThisBookIncart { get { return numberOfThisBookIncart; } set { numberOfThisBookIncart = NumberOfThisBookIncart; } }
+        public int NumberOfThisBookIncart { get { return numberOfThisBookIncart; } set { numberOfThisBookIncart = value; } }
         public IBooksWithInterface(string title, string author, decimal price,int instock)
         {
             this.price = price;
